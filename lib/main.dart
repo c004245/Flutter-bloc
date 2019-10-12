@@ -3,6 +3,7 @@ import 'package:flutter_bloc/MyAnimatedContainer.dart';
 import 'package:flutter_bloc/MyAnimatedOpacity.dart';
 import 'package:flutter_bloc/MyDrawer.dart';
 import 'package:flutter_bloc/MyFormValidation.dart';
+import 'package:flutter_bloc/MyMethodChannel.dart';
 import 'package:flutter_bloc/MyOrientation.dart';
 import 'package:flutter_bloc/MySnackBar.dart';
 import 'package:flutter_bloc/MySwipeToDismiss.dart';
@@ -92,6 +93,13 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => MySwipeToDismiss()));
+          },
+        ),
+        ListTile(
+          title: Text('MyChannel'),
+          onTap: () {
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) => MyMethodChannel()));
           },
         )
       ],
