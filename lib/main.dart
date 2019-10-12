@@ -2,6 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:flutter_bloc/MyAnimatedContainer.dart';
 import 'package:flutter_bloc/MyAnimatedOpacity.dart';
 import 'package:flutter_bloc/MyDrawer.dart';
+import 'package:flutter_bloc/MyFormValidation.dart';
 import 'package:flutter_bloc/MyOrientation.dart';
 import 'package:flutter_bloc/MySnackBar.dart';
 
@@ -21,7 +22,7 @@ class MyApp extends StatelessWidget {
           // changing the primarySwatch below to Colors.green and then invoke
           // "hot reload" (press "r" in the console where you ran "flutter run",
           // or simply save your changes to "hot reload" in a Flutter IDE).
-          // Notice that the counter didn't reset back to zero; the application
+          // Notice that the counter didn't reset back to  zero; the application
           // is not restarted.
           primarySwatch: Colors.blue,
         ),
@@ -76,6 +77,13 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => MyOrientation()));
+          },
+        ),
+        ListTile(
+          title: Text('Validation'),
+          onTap: () {
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) => MyFormValidation()));
           },
         )
       ],
