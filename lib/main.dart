@@ -5,6 +5,7 @@ import 'package:flutter_bloc/MyDrawer.dart';
 import 'package:flutter_bloc/MyFormValidation.dart';
 import 'package:flutter_bloc/MyOrientation.dart';
 import 'package:flutter_bloc/MySnackBar.dart';
+import 'package:flutter_bloc/MySwipeToDismiss.dart';
 
 void main() => runApp(MyApp());
 
@@ -84,6 +85,13 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {
             Navigator.push(context,
             MaterialPageRoute(builder: (context) => MyFormValidation()));
+          },
+        ),
+        ListTile(
+          title: Text('SwipeToDismiss'),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MySwipeToDismiss()));
           },
         )
       ],
