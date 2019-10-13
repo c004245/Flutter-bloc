@@ -15,7 +15,7 @@ class MainActivity: FlutterActivity() {
     super.onCreate(savedInstanceState)
     GeneratedPluginRegistrant.registerWith(this)
 
-    MethodChannel(flutterView, CHANNEL)
+  /*  MethodChannel(flutterView, CHANNEL)
             .setMethodCallHandler {
               methodCall, result ->
               if (methodCall.method == "getValue") {
@@ -24,6 +24,6 @@ class MainActivity: FlutterActivity() {
                 result.notImplemented()
               }
 
-            }
+            }*/
   }
 }

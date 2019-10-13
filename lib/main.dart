@@ -5,6 +5,7 @@ import 'package:flutter_bloc/MyDrawer.dart';
 import 'package:flutter_bloc/MyFormValidation.dart';
 import 'package:flutter_bloc/MyMethodChannel.dart';
 import 'package:flutter_bloc/MyOrientation.dart';
+import 'package:flutter_bloc/MyPageView.dart';
 import 'package:flutter_bloc/MySnackBar.dart';
 import 'package:flutter_bloc/MySwipeToDismiss.dart';
 
@@ -101,7 +102,14 @@ class _MyHomePageState extends State<MyHomePage> {
             Navigator.push(context,
             MaterialPageRoute(builder: (context) => MyMethodChannel()));
           },
-        )
+        ),
+        ListTile(
+          title: Text('MyTabController'),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => MyPageView()));
+          },
+        ),
       ],
     );
   }
