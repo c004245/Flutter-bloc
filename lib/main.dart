@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/MicroDust.dart';
 import 'package:flutter_bloc/MyAnimatedContainer.dart';
 import 'package:flutter_bloc/MyAnimatedOpacity.dart';
 import 'package:flutter_bloc/MyDrawer.dart';
@@ -110,6 +111,13 @@ class _MyHomePageState extends State<MyHomePage> {
                 MaterialPageRoute(builder: (context) => MyPageView()));
           },
         ),
+        ListTile(
+          title: Text('MicroDust'),
+          onTap: () {
+            Navigator.push(context,
+              MaterialPageRoute(builder: (context) => MicroDust()));
+          },
+        )
       ],
     );
   }
