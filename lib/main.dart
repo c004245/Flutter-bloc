@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/CounterTest.dart';
 import 'package:flutter_bloc/MicroDust.dart';
 import 'package:flutter_bloc/MyAnimatedContainer.dart';
 import 'package:flutter_bloc/MyAnimatedOpacity.dart';
@@ -116,6 +117,13 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {
             Navigator.push(context,
               MaterialPageRoute(builder: (context) => MicroDust()));
+          },
+        ),
+        ListTile(
+          title: Text('RxTest'),
+          onTap: () {
+            Navigator.push(context,
+            MaterialPageRoute(builder: (context) => Counter()));
           },
         )
       ],
