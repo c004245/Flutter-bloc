@@ -6,15 +6,21 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
+import 'package:flutter_bloc/model/AirResult.dart';
 import 'package:flutter_test/flutter_test.dart';
 
 import 'package:flutter_bloc/main.dart';
 import 'package:http/http.dart' as http;
+
+import 'dart:convert';
 
 void main() {
   test('http 통신 테스트', () async {
     var response = await http.get('http://api.airvisual.com/v2/nearest_city?key=e25987c8-4c76-4335-9369-67554acbc122');
 
     expect(response.statusCode, 200);
+
+    AirResult result = AirResult.fromJson(json.decode(response.body));
+    expect(result.status, 'success');
   });
 }
