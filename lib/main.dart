@@ -10,6 +10,7 @@ import 'package:flutter_bloc/MyOrientation.dart';
 import 'package:flutter_bloc/MyPageView.dart';
 import 'package:flutter_bloc/MySnackBar.dart';
 import 'package:flutter_bloc/MySwipeToDismiss.dart';
+import 'package:flutter_bloc/bloc/bloctest.dart';
 
 void main() => runApp(MyApp());
 
@@ -124,6 +125,13 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {
             Navigator.push(context,
             MaterialPageRoute(builder: (context) => Counter()));
+          },
+        ),
+        ListTile(
+          title: Text('Bloc'),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => BlocTest()));
           },
         )
       ],
