@@ -1,5 +1,5 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/bloc/CounterBloc.dart';
+import 'package:flutter_bloc_test/bloc/CounterBloc.dart';
 
 final counterBlock = CounterBloc();
 

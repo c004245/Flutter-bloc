@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/bloc/air_bloc.dart';
-import 'package:flutter_bloc/model/AirResult.dart';
+import 'package:flutter_bloc_test/bloc/air_bloc.dart';
+import 'package:flutter_bloc_test/model/AirResult.dart';
 
 final airBloc = AirBloc();
 

@@ -1,5 +1,5 @@
 import 'dart:convert';
-import 'package:flutter_bloc/model/AirResult.dart';
+import 'package:flutter_bloc_test/model/AirResult.dart';
 import 'package:http/http.dart' as http;
 import 'package:rxdart/rxdart.dart';
 
