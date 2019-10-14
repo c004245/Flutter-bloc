@@ -6,13 +6,13 @@
 // tree, read text, and verify that the values of widget properties are correct.
 
 import 'package:flutter/material.dart';
-import 'package:flutter_bloc/model/AirResult.dart';
 import 'package:flutter_test/flutter_test.dart';
 
-import 'package:flutter_bloc/main.dart';
 import 'package:http/http.dart' as http;
 
 import 'dart:convert';
+
+import '../lib/model/AirResult.dart';
 
 void main() {
   test('http 통신 테스트', () async {

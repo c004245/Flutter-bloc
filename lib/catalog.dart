@@ -1,9 +1,9 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_bloc/flutter_bloc.dart';
+import 'package:flutter_bloc_test/cart.dart';
 import 'package:flutter_bloc_test/model/item_model.dart';
 
-import 'bloc/cart_bloc.dart';
-
+import 'package:flutter_bloc_test/bloc/cart_bloc.dart';
 class Catalog extends StatefulWidget {
   @override
   _CatalogState createState() => _CatalogState();
@@ -19,7 +19,10 @@ class _CatalogState extends State<Catalog> {
         appBar: AppBar(title: Text('Catalog'), actions: <Widget>[
           IconButton(
             icon: Icon(Icons.archive),
-            onPressed: () {},
+            onPressed: () {
+              Navigator.of(context)
+                  .push(MaterialPageRoute(builder: (_) => Cart()));
+            },
           )
         ]),
         body: BlocProvider(
