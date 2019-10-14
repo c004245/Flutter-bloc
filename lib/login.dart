@@ -3,8 +3,7 @@ import 'package:flutter_bloc/flutter_bloc.dart';
 import 'package:flutter_bloc_test/catalog.dart';
 
 import 'bloc/cart_bloc.dart';
-
-final cartBloc = CartBloc();
+import 'bloc/cart_provider.dart';
 
 class LoginScreen extends StatefulWidget {
   @override
@@ -16,7 +15,8 @@ class _LoginScreenState extends State<LoginScreen> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
+    return CartProvider(
+        child: Scaffold(
         appBar: AppBar(
           title: Text('WelCome'),
         ),
@@ -27,6 +27,6 @@ class _LoginScreenState extends State<LoginScreen> {
             Navigator.of(context)
                 .push(MaterialPageRoute(builder: (context) => Catalog()));
           },
-        )));
+        ))));
   }
 }
