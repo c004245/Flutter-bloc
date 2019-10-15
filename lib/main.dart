@@ -13,6 +13,7 @@ import 'package:flutter_bloc_test/MyPageView.dart';
 import 'package:flutter_bloc_test/MySnackBar.dart';
 import 'package:flutter_bloc_test/MySwipeToDismiss.dart';
 import 'package:flutter_bloc_test/bloc/bloctest.dart';
+import 'package:flutter_bloc_test/visible_test.dart';
 import 'package:provider/provider.dart';
 
 void main() => runApp(MyApp());
@@ -21,22 +22,20 @@ class MyApp extends StatelessWidget {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
-    return MultiProvider(providers: [
-      ChangeNotifierProvider(builder: (_) => prefix0.Counter()),
-    ],
-      child: Consumer<Counter>(builder: (context, counter, _) {
-        MaterialApp(
-            title: 'Flutter Demo',
-            theme: ThemeData(
-              primarySwatch: Colors.blue,
+//    return MultiProvider(providers: [
+//      ChangeNotifierProvider(builder: (_) => prefix0.Counter()),
+//    ],
+//      child: Consumer<Counter>(builder: (context, counter, _) {
+    return MaterialApp(
+        title: 'Flutter Demo',
+        theme: ThemeData(
+          primarySwatch: Colors.blue,
+        ),
+        home: Scaffold(
+            appBar: AppBar(
+              title: Text('Flutter Tutorial'),
             ),
-            home: Scaffold(
-                appBar: AppBar(
-                  title: Text('Flutter Tutorial'),
-                ),
-                body: MyHomePage()));
-      }),
-    );
+            body: MyHomePage()));
   }
 }
 
@@ -89,7 +88,7 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('Validation'),
           onTap: () {
             Navigator.push(context,
-            MaterialPageRoute(builder: (context) => MyFormValidation()));
+                MaterialPageRoute(builder: (context) => MyFormValidation()));
           },
         ),
         ListTile(
@@ -103,35 +102,35 @@ class _MyHomePageState extends State<MyHomePage> {
           title: Text('MyChannel'),
           onTap: () {
             Navigator.push(context,
-            MaterialPageRoute(builder: (context) => MyMethodChannel()));
+                MaterialPageRoute(builder: (context) => MyMethodChannel()));
           },
         ),
         ListTile(
           title: Text('MyTabController'),
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => MyPageView()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MyPageView()));
           },
         ),
         ListTile(
           title: Text('MicroDust'),
           onTap: () {
-            Navigator.push(context,
-              MaterialPageRoute(builder: (context) => MicroDust()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => MicroDust()));
           },
         ),
         ListTile(
           title: Text('RxTest'),
           onTap: () {
-            Navigator.push(context,
-            MaterialPageRoute(builder: (context) => Counter()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => Counter()));
           },
         ),
         ListTile(
           title: Text('Bloc'),
           onTap: () {
-            Navigator.push(context,
-                MaterialPageRoute(builder: (context) => BlocTest()));
+            Navigator.push(
+                context, MaterialPageRoute(builder: (context) => BlocTest()));
           },
         ),
         ListTile(
@@ -139,6 +138,13 @@ class _MyHomePageState extends State<MyHomePage> {
           onTap: () {
             Navigator.push(context,
                 MaterialPageRoute(builder: (context) => LoginScreen()));
+          },
+        ),
+        ListTile(
+          title: Text('Visible'),
+          onTap: () {
+            Navigator.push(context,
+                MaterialPageRoute(builder: (context) => VisibleTest()));
           },
         )
       ],
